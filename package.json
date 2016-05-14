@@ -1,6 +1,6 @@
 {
   "name": "hubot-songlink",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "hubot script for generating songl.ink links from song urls",
   "main": "index.coffee",
   "scripts": {
