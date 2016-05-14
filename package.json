@@ -1,0 +1,20 @@
+{
+  "name": "hubot-songlink",
+  "version": "0.0.1",
+  "description": "hubot script for generating songl.ink links from song urls",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coffee-script": "~1.10.0"
+  },
+  "devDependencies": {
+    "chai": "~3.5.0",
+    "hubot-test-helper": "~1.4.4",
+    "mocha": "~2.4.5",
+    "nock": "~7.0.0"
+  }
+}
