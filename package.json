@@ -6,8 +6,12 @@
   "scripts": {
     "test": "mocha test"
   },
-  "author": "",
+  "author": "Joe Fleming (https://github.com/w33ble)",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w33ble/hubot-songlink.git"
+  },
   "dependencies": {
     "coffee-script": "~1.10.0"
   },
