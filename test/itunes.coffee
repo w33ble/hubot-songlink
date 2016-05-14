@@ -7,6 +7,8 @@ checks = require './fixtures/checks'
 helper = new HubotHelper('../index.coffee')
 
 describe 'listening and replying', ->
+  link = 'https://itun.es/us/18_Mbb?i=1100742531'
+
   beforeEach ->
     @room = helper.createRoom()
     nock.disableNetConnect()
@@ -23,17 +25,17 @@ describe 'listening and replying', ->
 
   context 'user says itunes url', ->
     it 'should respond if just a link', ->
-      @room.user.say('alice', 'https://itun.es/us/18_Mbb?i=1100742531')
+      @room.user.say('alice', "#{link}")
       .then => checks.checkBotResponse @room.messages
 
     it 'should respond if link at end', ->
-      @room.user.say('alice', 'OMG!!! YOU GUIZ!!!!!! https://itun.es/us/18_Mbb?i=1100742531')
+      @room.user.say('alice', "OMG!!! YOU GUIZ!!!!!! #{link}")
       .then => checks.checkBotResponse @room.messages
 
     it 'should respond if link at begining', ->
-      @room.user.say('alice', 'https://itun.es/us/18_Mbb?i=1100742531 <3 <3 <3')
+      @room.user.say('alice', "#{link} <3 <3 <3")
       .then => checks.checkBotResponse @room.messages
 
     it 'should respond if link in text', ->
-      @room.user.say('alice', 'i am crushing on https://itun.es/us/18_Mbb?i=1100742531 right now')
+      @room.user.say('alice', "i am crushing on #{link} right now")
       .then => checks.checkBotResponse @room.messages
