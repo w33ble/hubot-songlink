@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/w33ble/hubot-songlink.svg?branch=master)](https://travis-ci.org/w33ble/hubot-songlink)
 
-[hubot](https://hubot.github.com) script for generating [songl.ink](http://www.songl.ink/) links from song urls
+A [hubot](https://hubot.github.com) script for generating [songl.ink](http://www.songl.ink/) links from song urls
 
 ## Installation
 
