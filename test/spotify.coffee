@@ -11,7 +11,10 @@ describe 'listening and replying', ->
     @room = helper.createRoom()
     nock.disableNetConnect()
 
-    nock('http://www.songl.ink')
+    nock('http://www.songl.ink', {
+      reqheaders:
+        'Content-Type': 'application/json'
+    })
     .post '/create',
       source: 'spotify'
       source_id: '2zvXUc9nn5Uwer8dbWxN8F'
