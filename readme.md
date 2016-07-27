@@ -10,7 +10,7 @@ In hubot project repo, run:
 
 `npm install hubot-songlink --save`
 
-Then add **hubot-meme-generator** to your `external-scripts.json`:
+Then add **hubot-songlink** to your `external-scripts.json`:
 
 ```json
 [
