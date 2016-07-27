@@ -14,7 +14,7 @@ describe 'listening and replying', ->
     nock('http://www.songl.ink')
     .post '/create',
       source: 'spotify'
-      id: '2zvXUc9nn5Uwer8dbWxN8F'
+      source_id: '2zvXUc9nn5Uwer8dbWxN8F'
     .reply 200, responseBody
 
   afterEach ->
