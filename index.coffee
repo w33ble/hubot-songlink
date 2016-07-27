@@ -45,15 +45,19 @@ module.exports = (robot) ->
           source: meta.type
           id: msg.match[1]
 
+        robot.logger.debug 'songl.ink request payload', payload
+
         robot.http(apiUrl).post(JSON.stringify(payload)) (err, res, body) ->
           try
-            if err || res.statusCode >= 400
-              robot.logger.error err
+            if err
+              robot.logger.error "Request error:", err
+            else if res.statusCode >= 400
+              robot.logger.error "Bad server response: #{res.statusCode}"
               return
 
             data = JSON.parse body
 
             msg.send "#{data.artist} - #{data.title} | #{data.share_link}"
           catch e
-            robot.logger.error e
+            robot.logger.error 'Uncaught error:', e
 
