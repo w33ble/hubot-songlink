@@ -43,11 +43,13 @@ module.exports = (robot) ->
 
         payload =
           source: meta.type
-          id: msg.match[1]
+          source_id: msg.match[1]
 
         robot.logger.debug 'songl.ink request payload', payload
 
-        robot.http(apiUrl).post(JSON.stringify(payload)) (err, res, body) ->
+        robot.http(apiUrl)
+        .header('Content-Type', 'application/json')
+        .post(JSON.stringify(payload)) (err, res, body) ->
           try
             if err
               robot.logger.error "Request error:", err
